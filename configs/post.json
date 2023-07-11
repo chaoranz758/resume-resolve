@@ -1,0 +1,67 @@
+{
+  "resumeResolvingService": {
+    "mode": "dev",
+    "name": "post_service"
+  },
+  "log": {
+    "level": "debug",
+    "file_path": "../../../logs/service/post/log/post_service.log",
+    "max_size": 200,
+    "max_age": 30,
+    "max_backups": 7
+  },
+  "mysql": {
+    "host": "120.26.5.51",
+    "port": 3306,
+    "user": "root",
+    "password": "Mkgg1314;",
+    "dbname": "post_service",
+    "MaxIdleConns": 10,
+    "MaxOpenConns": 100
+  },
+  "redis": {
+    "host": "120.26.5.51",
+    "port": 6379,
+    "password": "mkgg1314",
+    "db": 0,
+    "PoolSize": 100
+  },
+  "rocketmq": {
+    "host": "120.26.5.51",
+    "port": 9876,
+    "retry_count": 5
+  },
+  "snowflake": {
+    "starttime": "2023-5-17",
+    "machineID": 2
+  },
+  "etcdServer": {
+    "ip":"120.26.5.51",
+    "port": 2379
+  },
+  "requestRpcServer": {
+    "department_service": {
+      "name": "department_service"
+    },
+    "post_category_service": {
+      "name": "post_category_service"
+    }
+  },
+  "server": {
+    "name": "post_service",
+    "max_connection": 10000,
+    "max_qps": 1000
+  },
+  "nacos": {
+    "ip": "120.26.5.51",
+    "port": 8848,
+    "namespace": "2448efc1-45e7-428c-aeeb-803cb1d97b7b",
+    "timeoutMs": 5000,
+    "notLoadCacheAtStart": true,
+    "logDir": "../../../logs/service/post/log/nacos/log",
+    "cacheDir": "../../../logs/service/post/log/nacos/cache",
+    "logLevel": "debug",
+    "dataID": "post_service.json",
+    "group": "dev"
+  }
+}

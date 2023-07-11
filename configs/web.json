@@ -1,0 +1,57 @@
+{
+  "resumeResolvingService": {
+    "mode": "dev",
+    "name": "web"
+  },
+  "log": {
+    "level": "debug",
+    "file_path": "../../logs/web/log/web.log",
+    "max_size": 200,
+    "max_age": 30,
+    "max_backups": 7
+  },
+  "jwt": {
+    "key": "secret key",
+    "time_out": 2,
+    "max_refresh": 4
+  },
+  "etcdServer": {
+    "ip":"120.26.5.51",
+    "port": 2379
+  },
+  "oss": {
+    "endpoint" : "http://oss-cn-qingdao.aliyuncs.com",
+    "accessKeyId" : "LTAI5tFRRVeWQNu4NrgQsLRr",
+    "accessKeySecret" : "M4WoCR6IZn6xSxGGyq9i5NgvrpsC7y",
+    "bucketName" :"simpledouyin"
+  },
+  "requestRpcServer": {
+    "user_service": {
+      "name": "user_service"
+    },
+    "resume_service": {
+      "name": "resume_service"
+    },
+    "post_service": {
+      "name": "post_service"
+    },
+    "post_category_service": {
+      "name": "post_category_service"
+    },
+    "department_service": {
+      "name": "department_service"
+    }
+  },
+  "nacos": {
+    "ip": "120.26.5.51",
+    "port": 8848,
+    "namespace": "4a86fb62-910a-4832-9a01-5b9247489dbe",
+    "timeoutMs": 5000,
+    "notLoadCacheAtStart": true,
+    "logDir": "../../logs/web/log/nacos/log",
+    "cacheDir": "../../logs/web/log/nacos/cache",
+    "logLevel": "debug",
+    "dataID": "web.json",
+    "group": "dev"
+  }
+}
